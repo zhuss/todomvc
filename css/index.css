@@ -1,0 +1,153 @@
+html,
+body {
+	min-height: 100%;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background: #EEE;
+	font-family: arial, "microsoft yahei";
+}
+
+input {
+	outline: none;
+	border: none;
+	background: #FFF;
+}
+
+.title {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 30px;
+	color: rgba(0, 160, 20, .2);
+}
+
+.editWarp {
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.editWarp input {
+	-webkit-appearance: none;
+	border-radius: 0;
+	width: 100%;
+	height: 60px;
+	padding: 0 10px;
+	font-size: 20px;
+	box-sizing: border-box;
+	font-family: "microsoft yahei";
+}
+
+.list {
+	width: 100%;
+}
+
+.item {
+	padding: 10px;
+	display: flex;
+	border-top:1px solid #CCC;
+	background: #FFF;
+}
+
+.chekbox {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #CCC;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.checked{
+	position: relative;
+	border: 1px solid rgba(0,160,20,8);
+}
+
+.checked:after{
+	position: absolute;
+	content: ' ';
+	width: 10px;
+	height: 10px;
+	background: rgba(0,160,20,8);
+	left: 5px;
+	top: 5px;
+	border-radius:50%;
+}
+
+.tomess {
+	flex: 1;
+	padding: 0 10px;
+}
+
+.remove{
+	color: #CCC;
+	text-decoration: line-through;
+}
+
+.close {
+	font-size: 20px;
+	color: rgba(160, 0, 20, .5);
+	cursor: pointer;
+}
+[v-cloak]{
+    display: none;
+}
+
+.searcWarp{
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.searcWarp input{
+	flex: 1;
+	height: 30px;
+	-webkit-appearance: none;
+	text-align: center;
+	display: block;
+	padding: 0;
+	margin: 0;
+	line-height: 30px;
+	font-family: "microsoft yahei";
+	color: #CCC;
+}
+
+.searcWarp input:checked{
+	color: rgba(0,160,20,1);
+}
+
+.searcWarp input:nth-child(1):before{
+	content: '全部';
+}
+
+.searcWarp input:nth-child(2):before{
+	content: '未完成';
+}
+
+.searcWarp input:nth-child(3):before{
+	content: '完成';
+}
+
+.searcWarp input:nth-child(4):before{
+	content: '清除';
+}
+
+
