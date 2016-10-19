@@ -30,8 +30,8 @@ var V = new Vue({
 		},
 
 		/*删除任务*/
-		remove: function(index) {
-			this.list.splice(index, 1);
+		remove: function(item) {
+			this.list.$remove(item);
 		},
 		
 		clear:function(){

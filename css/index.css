@@ -19,13 +19,16 @@ li {
 
 body {
 	background: #EEE;
-	font-family: arial, "microsoft yahei";
+	font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+	font-weight: 100;
 }
 
 input {
 	outline: none;
 	border: none;
 	background: #FFF;
+	font-weight: 100;
 }
 
 .title {
@@ -43,7 +46,11 @@ input {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 
-.editWarp input {
+.inputWarp {
+	display: flex;
+}
+
+.inputWarp input {
 	-webkit-appearance: none;
 	border-radius: 0;
 	width: 100%;
@@ -51,7 +58,19 @@ input {
 	padding: 0 10px;
 	font-size: 20px;
 	box-sizing: border-box;
-	font-family: "microsoft yahei";
+	font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+	display: block;
+	flex: 1;
+}
+
+.inputWarp button {
+	outline: none;
+	border: none;
+	width: 60px;
+	height: 60px;
+	color: #FFF;
+	background: rgba(0, 160, 20, .5);
+	font-weight: 100;
 }
 
 .list {
@@ -61,7 +80,7 @@ input {
 .item {
 	padding: 10px;
 	display: flex;
-	border-top:1px solid #CCC;
+	border-top: .5px solid #CCC;
 	background: #FFF;
 }
 
@@ -74,20 +93,20 @@ input {
 	cursor: pointer;
 }
 
-.checked{
+.checked {
 	position: relative;
-	border: 1px solid rgba(0,160,20,8);
+	border: 1px solid rgba(0, 160, 20, .5);
 }
 
-.checked:after{
+.checked:after {
 	position: absolute;
 	content: ' ';
 	width: 10px;
 	height: 10px;
-	background: rgba(0,160,20,8);
+	background: rgba(0, 160, 20, .5);
 	left: 5px;
 	top: 5px;
-	border-radius:50%;
+	border-radius: 50%;
 }
 
 .tomess {
@@ -95,7 +114,7 @@ input {
 	padding: 0 10px;
 }
 
-.remove{
+.remove {
 	color: #CCC;
 	text-decoration: line-through;
 }
@@ -105,49 +124,49 @@ input {
 	color: rgba(160, 0, 20, .5);
 	cursor: pointer;
 }
-[v-cloak]{
-    display: none;
+
+[v-cloak] {
+	display: none;
 }
 
-.searcWarp{
-	width: 90%;
-	max-width: 600px;
-	margin: 0 auto;
+.searcWarp {
 	display: flex;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	font-weight: 100;
 }
 
-.searcWarp input{
+.searcWarp input {
 	flex: 1;
-	height: 30px;
+	height: 40px;
 	-webkit-appearance: none;
 	text-align: center;
 	display: block;
 	padding: 0;
 	margin: 0;
-	line-height: 30px;
+	line-height: 40px;
 	font-family: "microsoft yahei";
 	color: #CCC;
+	border: none;
+	border-radius: 0;
+	font-size: 14px;
+	font-weight: 100;
 }
 
-.searcWarp input:checked{
-	color: rgba(0,160,20,1);
+.searcWarp input:checked {
+	color: rgba(0, 160, 20, 1);
 }
 
-.searcWarp input:nth-child(1):before{
+.searcWarp input:nth-child(1):before {
 	content: '全部';
 }
 
-.searcWarp input:nth-child(2):before{
+.searcWarp input:nth-child(2):before {
 	content: '未完成';
 }
 
-.searcWarp input:nth-child(3):before{
+.searcWarp input:nth-child(3):before {
 	content: '完成';
 }
 
-.searcWarp input:nth-child(4):before{
+.searcWarp input:nth-child(4):before {
 	content: '清除';
 }
-
-
